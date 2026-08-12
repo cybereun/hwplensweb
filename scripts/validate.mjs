@@ -10,6 +10,10 @@ const read = (file) => readFileSync(join(root, file), "utf8");
 const html = read("index.html");
 const css = read("styles.css");
 const app = read("app.js");
+const vercel = JSON.parse(read("vercel.json"));
+
+assert.equal(vercel.framework, null, "Vercel must treat this project as a static site");
+assert.equal(vercel.buildCommand, "", "Static Vercel deployment must not run a build command");
 
 const requiredAssets = [
   "assets/hwplens-logo.png",

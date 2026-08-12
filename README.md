@@ -37,4 +37,6 @@ npm test
 ## 배포
 
 `index.html`, `styles.css`, `app.js`, `assets/`, `server.cjs`를 포함한 프로젝트 파일을
-정적 호스팅에 업로드하면 됩니다. Node 서버는 로컬 확인용이며 배포에 필수는 아닙니다.
+정적 호스팅에 업로드하면 됩니다. 저장소의 `vercel.json`은 Vercel Framework Preset을
+`Other`로 고정하고 빌드 단계를 건너뛰어, 브라우저용 `app.js`가 서버 진입점으로 실행되지
+않도록 합니다. Node 서버는 로컬 확인용이며 배포에 필수는 아닙니다.
