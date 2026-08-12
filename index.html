@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko" data-motion="full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070914" />
+    <meta
+      name="description"
+      content="HwpLens는 한글 문서를 빠르게 훑고, 찾고, 관리하는 Windows 11 스타일 탐색기입니다."
+    />
+    <meta property="og:title" content="HwpLens — 한글 문서를 보는 새로운 방법" />
+    <meta
+      property="og:description"
+      content="HWP/HWPX 문서를 한 번에 훑고 바로 찾는 Windows 11 스타일 탐색기."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hwplens-logo.png" />
+    <title>HwpLens — 한글 문서를 보는 새로운 방법</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#story">본문으로 바로가기</a>
+
+    <div class="site-noise" aria-hidden="true"></div>
+
+    <header class="topbar" data-header>
+      <a class="brand" href="#top" aria-label="HwpLens 홈으로 이동">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="assets/hwplens-icon.png" alt="" />
+        </span>
+        <span class="brand__name">HwpLens</span>
+      </a>
+
+      <nav class="topnav" aria-label="주요 메뉴">
+        <a href="#features">기능</a>
+        <a href="#release">릴리즈</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button
+          class="motion-toggle"
+          id="motionToggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="모션 줄이기"
+        >
+          <span class="motion-toggle__icon" aria-hidden="true">◌</span>
+          <span class="motion-toggle__label">모션 줄이기</span>
+        </button>
+        <a
+          class="button button--small button--ghost"
+          href="https://github.com/cybereun/hwplens"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <aside class="chapter-rail" aria-label="페이지 진행 상태">
+      <span class="chapter-rail__line" aria-hidden="true"></span>
+      <a class="chapter-rail__dot is-active" href="#top" data-progress-target="top">
+        <span class="sr-only">소개</span>
+      </a>
+      <a class="chapter-rail__dot" href="#problem" data-progress-target="problem">
+        <span class="sr-only">문제</span>
+      </a>
+      <a class="chapter-rail__dot" href="#workflow" data-progress-target="workflow">
+        <span class="sr-only">미리보기</span>
+      </a>
+      <a class="chapter-rail__dot" href="#features" data-progress-target="features">
+        <span class="sr-only">기능</span>
+      </a>
+      <a class="chapter-rail__dot" href="#release" data-progress-target="release">
+        <span class="sr-only">릴리즈</span>
+      </a>
+      <a class="chapter-rail__dot" href="#faq" data-progress-target="faq">
+        <span class="sr-only">FAQ</span>
+      </a>
+    </aside>
+
+    <main id="story">
+      <section
+        class="chapter chapter--hero is-visible"
+        id="top"
+        data-chapter="top"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+        <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+        <div class="chapter__inner hero__inner">
+          <div class="hero__content reveal is-visible">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> WINDOWS 11 · HWP / HWPX</p>
+            <h1 id="hero-title">
+              문서를 여는 시간을,<br />
+              <em>문서를 찾는 시간</em>으로.
+            </h1>
+            <p class="hero__lead">
+              한글 문서가 쌓일수록, 파일을 여는 횟수는 줄어들어야 하니까.<br />
+              HwpLens는 한글 문서를 빠르게 훑고, 찾고, 관리하는 탐색기입니다.
+            </p>
+
+            <div class="hero__actions">
+              <a
+                class="button button--primary js-download"
+                href="https://github.com/cybereun/hwplens/releases/download/v1.0.3/HwpLens.Setup.1.0.3.exe"
+                download
+                data-download-link
+              >
+                <span class="button__icon" aria-hidden="true">↓</span>
+                <span data-download-label>v1.0.3 다운로드</span>
+              </a>
+              <a
+                class="text-link"
+                href="https://github.com/cybereun/hwplens/releases/tag/v1.0.3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                릴리즈 노트 보기 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <p class="hero__meta">
+              <span class="status-pip" aria-hidden="true"></span>
+              <span data-release-status>공식 GitHub 릴리즈에서 확인된 버전</span>
+              <span class="hero__meta-separator">·</span>
+              <span data-release-size>79.8 MB</span>
+            </p>
+          </div>
+
+          <div class="hero__visual reveal is-visible" aria-label="HwpLens 앱 아이콘 미리보기">
+            <div class="hero-art">
+              <div class="hero-art__halo hero-art__halo--outer" aria-hidden="true"></div>
+              <div class="hero-art__halo hero-art__halo--inner" aria-hidden="true"></div>
+              <div class="hero-art__grid" aria-hidden="true"></div>
+              <div class="hero-art__card">
+                <img src="assets/hwplens-logo.png" alt="문서를 비추는 돋보기와 한글 문서 아이콘" />
+              </div>
+              <span class="floating-chip floating-chip--version" aria-hidden="true">
+                <span class="floating-chip__key">CURRENT</span>
+                <strong data-release-version>v1.0.3</strong>
+              </span>
+              <span class="floating-chip floating-chip--format" aria-hidden="true">
+                <span class="floating-chip__icon">⌁</span>
+                <span>LOCAL · PRIVATE</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#problem">
+          <span class="scroll-cue__wheel" aria-hidden="true"></span>
+          <span>스크롤하여 기능 보기</span>
+          <span class="scroll-cue__arrow" aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="chapter chapter--problem" id="problem" data-chapter="problem" aria-labelledby="problem-title">
+        <div class="chapter__inner problem__inner">
+          <div class="chapter-label reveal">
+            <span class="chapter-label__number">01</span>
+            <span class="chapter-label__line"></span>
+            <span class="chapter-label__name">THE PROBLEM</span>
+          </div>
+
+          <div class="problem__copy reveal">
+            <p class="eyebrow eyebrow--muted">FIND THE CONTENT, NOT THE WINDOW</p>
+            <h2 id="problem-title">
+              한글 문서 하나 찾는데,<br />
+              <span>왜 앱을 하나씩 열어야 할까요?</span>
+            </h2>
+            <p>
+              파일명만 보고는 알 수 없는 문서의 내용을 확인하려고 매번 한글 프로그램을 열고
+              닫는 일. HwpLens는 그 반복을 건너뜁니다. 익숙한 탐색기 안에서 문서의 첫 장을
+              바로 훑어보세요.
+            </p>
+            <div class="quote-line">
+              <span class="quote-line__mark">“</span>
+              <span>열기 전에, 이미 찾을 수 있도록.</span>
+            </div>
+          </div>
+
+          <div class="problem__signal reveal" aria-label="HwpLens가 줄이는 반복 작업">
+            <div class="signal-ring signal-ring--one" aria-hidden="true"></div>
+            <div class="signal-ring signal-ring--two" aria-hidden="true"></div>
+            <div class="signal-core">
+              <span class="signal-core__caption">OPEN / CLOSE</span>
+              <strong>반복을<br /><em>건너뛰기</em></strong>
+              <span class="signal-core__caption">PREVIEW FIRST</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter--workflow" id="workflow" data-chapter="workflow" aria-labelledby="workflow-title">
+        <div class="chapter__inner workflow__inner">
+          <div class="chapter-label reveal">
+            <span class="chapter-label__number">02</span>
+            <span class="chapter-label__line"></span>
+            <span class="chapter-label__name">THE WORKFLOW</span>
+          </div>
+
+          <div class="workflow__heading reveal">
+            <p class="eyebrow eyebrow--muted">ONE CLICK, MORE CONTEXT</p>
+            <h2 id="workflow-title">열지 않아도<br /><span>내용이 먼저 보입니다.</span></h2>
+          </div>
+
+          <div class="explorer-window reveal" aria-label="HwpLens 탐색기 화면 예시">
+            <div class="explorer-window__topbar">
+              <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <span class="window-title">HwpLens <span>/ Documents</span></span>
+              <span class="window-status"><i></i> LOCAL</span>
+            </div>
+            <div class="explorer-window__body">
+              <aside class="explorer-sidebar" aria-hidden="true">
+                <p class="sidebar-title">QUICK ACCESS</p>
+                <span class="sidebar-item is-selected"><b>⌂</b> 홈</span>
+                <span class="sidebar-item"><b>▣</b> 문서</span>
+                <span class="sidebar-item"><b>↓</b> 다운로드</span>
+                <span class="sidebar-item"><b>▤</b> 최근 항목</span>
+                <p class="sidebar-title sidebar-title--drive">DEVICES</p>
+                <span class="sidebar-item"><b>▰</b> Windows (C:)</span>
+                <span class="sidebar-item"><b>▰</b> USB DRIVE</span>
+              </aside>
+              <div class="explorer-list" aria-hidden="true">
+                <div class="explorer-toolbar"><span>Documents</span><span class="toolbar-search">⌕ 문서 검색</span></div>
+                <div class="file-row file-row--head"><span>이름</span><span>수정한 날짜</span><span>유형</span></div>
+                <div class="file-row file-row--active"><span><i class="file-icon file-icon--hwp">한</i> 2026_업무보고서.hwp</span><span>오늘 09:42</span><span>HWP 문서</span></div>
+                <div class="file-row"><span><i class="file-icon file-icon--hwpx">한</i> 프로젝트_기획안.hwpx</span><span>어제 17:18</span><span>HWPX 문서</span></div>
+                <div class="file-row"><span><i class="file-icon file-icon--hwp">한</i> 회의록_6월.hwp</span><span>6월 14일</span><span>HWP 문서</span></div>
+                <div class="file-row"><span><i class="file-icon file-icon--hwpx">한</i> 참고자료_모음.hwpx</span><span>6월 11일</span><span>HWPX 문서</span></div>
+              </div>
+              <div class="explorer-preview">
+                <div class="preview-meta"><span>PREVIEW</span><span>1 / 5</span></div>
+                <div class="preview-paper">
+                  <span class="paper-kicker">2026 업무보고서</span>
+                  <span class="paper-title"></span>
+                  <span class="paper-line paper-line--long"></span>
+                  <span class="paper-line"></span>
+                  <span class="paper-line paper-line--short"></span>
+                  <span class="paper-chart"><i></i><i></i><i></i><i></i><i></i></span>
+                  <span class="paper-line paper-line--long"></span>
+                </div>
+                <span class="preview-zoom">100%</span>
+              </div>
+            </div>
+            <div class="explorer-window__caption">
+              <span><i class="caption-dot"></i> 클릭 한 번으로 본문 미리보기</span>
+              <span>SVG RENDERING · WASM CORE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter--features" id="features" data-chapter="features" aria-labelledby="features-title">
+        <div class="chapter__inner features__inner">
+          <div class="chapter-label reveal">
+            <span class="chapter-label__number">03</span>
+            <span class="chapter-label__line"></span>
+            <span class="chapter-label__name">THE TOOLKIT</span>
+          </div>
+
+          <div class="features__heading reveal">
+            <p class="eyebrow eyebrow--muted">BUILT FOR THE WAY YOU WORK</p>
+            <h2 id="features-title">익숙한데, 더 빠릅니다.</h2>
+            <p>탐색기의 편안함 위에, 한글 문서에 필요한 속도와 시야를 더했습니다.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card feature-card--violet reveal">
+              <div class="feature-card__top"><span>01 / VIEW</span><span class="feature-card__glyph">◎</span></div>
+              <h3>1초 안에<br /><em>미리보기</em></h3>
+              <p>HWP 5.0과 HWPX 문서를 무거운 프로그램 없이 브라우저처럼 빠르게 렌더링합니다.</p>
+              <div class="feature-card__visual feature-card__visual--scan" aria-hidden="true"><span></span><span></span><span></span><i></i></div>
+            </article>
+
+            <article class="feature-card feature-card--blue reveal">
+              <div class="feature-card__top"><span>02 / MANAGE</span><span class="feature-card__glyph">⌘</span></div>
+              <h3>탐색기처럼<br /><em>익숙하게</em></h3>
+              <p>파일 이동, 복사, 삭제, 이름 바꾸기까지 Windows 11 스타일의 흐름 그대로.</p>
+              <div class="feature-card__visual feature-card__visual--folders" aria-hidden="true"><span>▰</span><span>▰</span><span>▰</span><span>→</span></div>
+            </article>
+
+            <article class="feature-card feature-card--lime reveal">
+              <div class="feature-card__top"><span>03 / FIND</span><span class="feature-card__glyph">⌕</span></div>
+              <h3>찾고, 정렬하고<br /><em>바로 열기</em></h3>
+              <p>이름·날짜·유형·크기 필터와 8가지 보기 모드로 필요한 문서에 곧장 닿습니다.</p>
+              <div class="feature-card__visual feature-card__visual--bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter--release" id="release" data-chapter="release" aria-labelledby="release-title">
+        <div class="release__backdrop" aria-hidden="true"></div>
+        <div class="chapter__inner release__inner">
+          <div class="chapter-label chapter-label--light reveal">
+            <span class="chapter-label__number">04</span>
+            <span class="chapter-label__line"></span>
+            <span class="chapter-label__name">LATEST RELEASE</span>
+          </div>
+
+          <div class="release__layout">
+            <div class="release__copy reveal">
+              <p class="eyebrow eyebrow--bright"><span class="eyebrow__dot"></span> READY WHEN YOU ARE</p>
+              <h2 id="release-title">지금,<br /><em>한 번에 설치하세요.</em></h2>
+              <p>
+                최신 Windows 설치 파일을 GitHub 릴리즈에서 바로 받으세요. 앱은 로컬에서 동작하고,
+                문서는 내 PC 안에 머뭅니다.
+              </p>
+              <div class="release__actions">
+                <a
+                  class="button button--light js-download"
+                  href="https://github.com/cybereun/hwplens/releases/download/v1.0.3/HwpLens.Setup.1.0.3.exe"
+                  download
+                  data-download-link
+                >
+                  <span class="button__icon" aria-hidden="true">↓</span>
+                  <span data-download-label>v1.0.3 다운로드</span>
+                </a>
+                <a
+                  class="text-link text-link--light"
+                  href="https://github.com/cybereun/hwplens/releases/tag/v1.0.3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  전체 릴리즈 보기 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <p class="release__status" data-release-source>공식 릴리즈 자산으로 연결됩니다.</p>
+            </div>
+
+            <div class="release-card reveal" aria-label="현재 HwpLens 릴리즈 정보">
+              <div class="release-card__top">
+                <span class="release-card__badge">LATEST</span>
+                <span class="release-card__branch" aria-hidden="true">● ● ●</span>
+              </div>
+              <div class="release-card__version">
+                <span class="release-card__prefix">HwpLens</span>
+                <strong data-release-version>v1.0.3</strong>
+              </div>
+              <p class="release-card__date">Published <span data-release-date>2026. 06. 15.</span></p>
+              <div class="release-card__facts">
+                <div><span>PLATFORM</span><strong>Windows 11</strong></div>
+                <div><span>FORMATS</span><strong>HWP · HWPX</strong></div>
+                <div><span>INSTALLER</span><strong data-release-asset>HwpLens.Setup.1.0.3.exe</strong></div>
+                <div><span>SIZE</span><strong data-release-size>79.8 MB</strong></div>
+              </div>
+              <div class="release-card__change">
+                <span class="release-card__change-icon" aria-hidden="true">✓</span>
+                <span><b>v1.0.3</b> 한글 USB 드라이브 이름 깨짐 현상을 수정했습니다.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter--faq" id="faq" data-chapter="faq" aria-labelledby="faq-title">
+        <div class="chapter__inner faq__inner">
+          <div class="chapter-label reveal">
+            <span class="chapter-label__number">05</span>
+            <span class="chapter-label__line"></span>
+            <span class="chapter-label__name">GOOD TO KNOW</span>
+          </div>
+
+          <div class="faq__layout">
+            <div class="faq__heading reveal">
+              <p class="eyebrow eyebrow--muted">BEFORE YOU START</p>
+              <h2 id="faq-title">가볍게 시작하고,<br /><span>필요할 때 더 알아보세요.</span></h2>
+              <p>설치 전 꼭 필요한 정보만 짧게 정리했습니다.</p>
+              <a
+                class="text-link"
+                href="https://github.com/cybereun/hwplens"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                소스 코드와 전체 문서 보기 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <div class="faq__list reveal">
+              <details>
+                <summary>설치 후 포트 충돌 오류가 나면 어떻게 하나요?<span aria-hidden="true"></span></summary>
+                <p>
+                  최신 v1.0.3을 먼저 사용해 주세요. v1.0.2부터는 이미 실행 중인 창이 있을 때 새
+                  창 대신 기존 창을 안전하게 다시 불러오도록 개선되었습니다. 이전 버전의
+                  프로세스가 남아 있다면 작업 관리자에서 HwpLens 또는 Node.js 프로세스를 종료한
+                  뒤 다시 실행해 보세요.
+                </p>
+              </details>
+              <details>
+                <summary>어떤 문서 형식을 지원하나요?<span aria-hidden="true"></span></summary>
+                <p>HWP 5.0 문서와 HWPX 문서를 지원합니다. 암호가 설정된 문서는 안전을 위해 데스크톱 한글 프로그램에서 직접 열어 주세요.</p>
+              </details>
+              <details>
+                <summary>문서는 외부로 전송되나요?<span aria-hidden="true"></span></summary>
+                <p>HwpLens는 로컬 파일을 탐색하고 미리보기하는 데스크톱 앱입니다. 문서는 사용자의 PC 안에서 처리됩니다.</p>
+              </details>
+            </div>
+          </div>
+
+          <footer class="site-footer">
+            <div class="footer-brand"><span class="brand__mark"><img src="assets/hwplens-icon.png" alt="" loading="lazy" /></span><span>HwpLens</span></div>
+            <p>한글 문서를 보는 새로운 방법.</p>
+            <div class="footer-links">
+              <span>© <span data-current-year>2026</span> cybereun</span>
+              <a href="https://github.com/cybereun/hwplens/releases" target="_blank" rel="noopener noreferrer">Releases ↗</a>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <noscript>
+      <div class="noscript-banner">
+        JavaScript가 꺼져 있어도 이 페이지의 설명과 다운로드 링크는 사용할 수 있습니다.
+        <a href="https://github.com/cybereun/hwplens/releases/tag/v1.0.3" target="_blank" rel="noopener noreferrer">GitHub 릴리즈 열기 ↗</a>
+      </div>
+    </noscript>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
